@@ -217,7 +217,7 @@ namespace VivHelper.Entities {
                     _ = edge.Parent.Position + edge.B;
                     for (int i = 0; (float) i <= edge.Length; i++) {
                         Vector2 vector = value + edge.Normal * i;
-                        Draw.Line(vector, vector + edge.Perpendicular * edge.Wave[i], Color.White);
+                        Draw.Line(vector, Calc.Round(vector + edge.Perpendicular * edge.Wave[i]), Color.White);
                     }
                 }
             }
@@ -238,7 +238,7 @@ namespace VivHelper.Entities {
                             _ = edge.Parent.Position + edge.B;
                             for (int i = 0; (float) i <= edge.Length; i++) {
                                 Vector2 vector = value2 + edge.Normal * i;
-                                Draw.Line(vector, vector + edge.Perpendicular * edge.Wave[i], color * 0.25f);
+                                Draw.Line(vector, Calc.Round(vector + edge.Perpendicular * edge.Wave[i]), color * 0.25f);
                             }
                         }
                     }
